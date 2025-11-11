@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.timer-container {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.timer {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height if needed */
+    padding-top: 1em;
+    padding-bottom: 3em;
+    margin: 0px 0; /* Add top and bottom margins */
+}
+
+
+.timer div {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 3em;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.timer div:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.HENRY p:first-child,
+.timer div span {
+    font-size: 3.5em;
+    font-family: 'Orbitron', sans-serif;
+    color:#81b9a2;
+    text-shadow: 0 4px 6px #428679;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.timer div span:hover,
+.HENRY p:first-child:hover {
+    color: #bfedc8;
+    text-shadow: 0 4px 20px #428679;
+}
+
+.HENRY p small {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.contact-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(0deg, #236e65, #7ecd73, #cff8d6); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent for the gradient to show */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Keep this in case you need it for older browsers */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Increased letter spacing */
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.HENRY p:first-child {
+    animation: pulse 2s infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .timer {
+        margin: 150px 0 100px 0; /* Less margin for mobile */
+    }
+    .timer div {
+        padding: 2em; 
+        grid-template-columns: repeat(4, 1fr); 
+        width: calc(100% - 2em); 
+    }
+    .HENRY p:first-child,
+    .timer div span {
+        font-size: 3em; 
+    }
+    .contact-title{
+        margin: 100px 0 50px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timer {
+        margin: 50px auto;
+    }
+    .timer-container{
+        margin-top: 11rem;
+    }
+    .contact-title {
+        text-align: center;
+        font-size: 65px;
+        font-weight: bold;
+        background: linear-gradient(0deg, #236e65, #7ecd73, #cff8d6); /* Gradient colors */
+        -webkit-background-clip: text; /* Clip the background to the text */
+        -webkit-text-fill-color: transparent; /* Make text color transparent for the gradient to show */
+        background-clip: text; /* For other browsers */
+        color: transparent; /* Keep this in case you need it for older browsers */
+        margin-bottom: 20px;
+        letter-spacing: 2px; /* Increased letter spacing */
+    }
+    .timer div {
+        margin-top: 1000px !important;
+        margin-bottom: 1000px;
+        padding: 1.5em; 
+        grid-template-columns: repeat(1, 1fr); 
+        width: calc(100% - 2em); 
+    }
+    .HENRY p:first-child,
+    .timer div span {
+        font-size: 2.5em; 
+        text-align: center;
+    }
+    .HENRY p small {
+        font-size: 1em; 
+    }
+    span {
+        display: none; 
+    }
+}
+
+@media (max-width: 390px) {
+    .timer {
+        margin: 20px 0 0px 0; /* Less margin for mobile */
+    }
+}
+
+@media (max-width: 414px) {
+    .timer {
+        margin: auto !important; /* Less margin for mobile */
+        padding: 0px;
+        z-index: -1;
+       
+    }
+    .HENRY{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .timer div {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 0px;
+    }    
+    .contact-title{
+        margin: 100px 0 50px 0;
+    }   
+    .timer-container{
+        margin-top: 12rem !important;
+    }
+}

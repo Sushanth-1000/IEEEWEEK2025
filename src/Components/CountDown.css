@@ -1,0 +1,308 @@
+/* Countdown container */
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* margin-top:2em; */
+}
+.countdown-image {
+    width: 200%; /* Responsive width */
+    max-width: 1000px; /* Maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 25px 0px;
+}
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/* .countdown-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+} */
+
+/* Title and Date styles */
+.countdown-header {
+    margin-bottom: 0px;
+}
+
+.ieee-week-dates {
+    font-size: 3.5rem;
+    background: linear-gradient(0deg, #236e65, #7ecd73, #cff8d6);
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-top: 15px;
+    margin-bottom: 0px; 
+    font-weight: 1000 !important;
+}
+
+/* Timer container styles */
+.timer-container1{
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack the timer elements vertically */
+    align-items: center; /* Center the timer elements horizontally */
+    justify-content: center; /* Center them vertically */
+    margin-top: -10px; /* Add a small margin for spacing */
+}
+
+.timer {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 1em;
+    height: 55vh !important;
+}
+
+.timer div {
+    border: 3px solid;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 0em;
+    padding: 3em;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.timer div:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+
+.timer div::before{
+    text-shadow:#7ecd73;
+}
+/* Countdown numbers and colon  linear-gradient(0deg, #236e65, #7ecd73, #cff8d6); */
+.HENRY p:first-child, .timer div span {
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+    color: #cff8d6 !important;
+    /* text-shadow: 0 4px 10px #7ecd73 !important; */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.timer div span:hover, .HENRY p:first-child:hover {
+    color: #cff8d6!important;
+    text-shadow: 0 4px 20px #cff8d6 !important;
+}
+
+/* Label below countdown numbers */
+.HENRY p small {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animation for the numbers */
+.HENRY p:first-child {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    .countdown-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100vw;
+        margin: 30px 0;
+    }
+    .ieee-week-dates{
+        /* margin-bottom: 1.8rem; */
+        font-size: 1.8rem !important;
+    }
+    .ieee-week-title{
+        margin-top: 0px !important;
+        font-size: 40px  !important;
+    }
+    .timer{
+        width: 60% !important;
+    }
+   .timer-container1{
+    margin: 5px auto 5px auto !important;
+    padding: 0px !important    ;
+   }
+    .timer div {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 1em;
+        margin-right: 1em;
+        padding: 2em 1em;
+    }
+    .colon {
+        display: none; /* Hide colon */
+    }
+    .HENRY{
+        margin:auto;
+    }
+    /* Adjust font sizes for mobile */
+    .HENRY p:first-child, .timer div span {
+        font-size: 2.2em;
+    }
+
+    .HENRY p small {
+        font-size: 1em;
+    }
+
+    .ieee-week-title {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .ieee-week-dates {
+        font-size: 1.6rem;
+        margin: 0, 0, 10px, 0;
+    }
+    .countdown-image {
+        max-width: 80%; /* Full width for smaller screens */
+        margin: 0px auto -50px auto !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .countdown-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100vw;
+        margin: 30px 0;
+    }
+    .ieee-week-dates{
+        /* margin-bottom: 1.8rem; */
+        font-size: 1.8rem !important;
+    }
+    .ieee-week-title{
+        margin-top: 0px !important;
+        font-size: 40px  !important;
+    }
+    .timer{
+        width: 60% !important;
+    }
+   .timer-container1{
+    margin: 60px auto 5px auto !important;
+    padding: 0px !important    ;
+   }
+    .timer div {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 1em;
+        margin-right: 1em;
+        padding: 2em 1em;
+    }
+    .colon {
+        display: none; /* Hide colon */
+    }
+    .HENRY{
+        margin:auto;
+    }
+    /* Adjust font sizes for mobile */
+    .HENRY p:first-child, .timer div span {
+        font-size: 2.2em;
+    }
+
+    .HENRY p small {
+        font-size: 1em;
+    }
+
+    .ieee-week-title {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .ieee-week-dates {
+        font-size: 1.6rem;
+        margin: 0, 0, 10px, 0;
+    }
+    .countdown-image {
+        max-width: 80%; /* Reduce width for small screens */
+        margin: 15px auto; /* Center the image with margin */
+    }
+
+}
+@media screen and (max-width: 412px) {
+    .timer-container1{
+        margin: -10px auto 10px auto !important;
+        padding: 0px !important;
+        margin-top: 60px !important;
+       }
+       .countdown-image{
+        margin: 40px auto -50px auto !important;
+       }
+      
+    .ieee-week-dates{
+        margin: 10px auto 10px auto !important;
+    }
+    .timer{
+        height: 60vh !important;
+    }
+}
+@media screen and (max-width: 375px) {
+.countdown-image{
+    margin:30px 0 -10px 0 !important;
+    }
+ }
+ @media (max-width: 390px) {
+    .countdown-image {
+    margin: 0px 0 -10px 0 !important;
+    }
+ }
+ /* Responsive design for tablet */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .countdown-container {
+        flex-direction: column; /* Maintain vertical layout */
+        padding: 0 1em; /* Add padding for better spacing */
+    }
+    
+    .countdown-image {
+        max-width: 90%; /* Slightly reduce image size */
+        margin: 20px auto; /* Center image with margin */
+    }
+
+    .ieee-week-dates {
+        font-size: 2.5rem; /* Adjust font size for tablet */
+        margin: 10px 0; /* Add spacing above and below */
+    }
+
+    .timer {
+        width: 70%; /* Adjust timer width */
+        height: 50vh; /* Reduce height for better fit */
+    }
+
+    .timer div {
+        grid-template-columns: repeat(3, 1fr); /* Change columns for better distribution */
+        padding: 2em 1em; /* Adjust padding */
+    }
+
+    .HENRY p:first-child, .timer div span {
+        font-size: 2.5em; /* Adjust font size */
+    }
+
+    .HENRY p small {
+        font-size: 1.1em; /* Slightly larger small text */
+    }
+}

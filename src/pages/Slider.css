@@ -1,0 +1,113 @@
+/* Container for the slide */
+
+/* Individual slide */
+.slide {
+  transition: transform 500ms ease 0s, opacity 500ms ease 0s, visibility 500ms ease 0s;
+  position: absolute;
+  top: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Reflection effect */
+
+
+/* Flexbox settings for content */
+.sliderContent {
+  display: flex !important;
+  flex-direction: column;
+  color: white;
+  padding: 1.5rem; /* Use rem for responsiveness */
+  align-items: flex-start;
+  font-family: "Lucida Sans", "Lucida Grande", sans-serif;
+}
+
+.sliderContent h2 {
+  margin: 1rem 0;
+}
+
+.sliderContent p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+/* Global settings */
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 70vh;
+  margin-bottom: 15em;
+}
+.slideC {
+  position: relative;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4/3;
+  margin: 0 auto;
+  display: flex !important;
+}
+
+
+.slideC .slide:nth-child(2) {
+  transform: translateX(-150px) translateZ(-200px) rotateY(20deg);
+  opacity: 0.8;
+  z-index: 9;
+}
+.slideC .slide:nth-child(4) {
+  transform: translateX(150px) translateZ(-200px) rotateY(-20deg);
+  opacity: 0.8;
+  z-index: 9;
+}
+
+/* Next layer slides */
+.slideC .slide:nth-child(1) {
+  transform: translateX(-300px) translateZ(-400px) rotateY(30deg);
+  opacity: 0.6;
+  z-index: 8;
+}
+.slideC .slide:nth-child(5) {
+  transform: translateX(300px) translateZ(-400px) rotateY(-30deg);
+  opacity: 0.6;
+  z-index: 8;
+}
+
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+  .slideC .slide:nth-child(3) {
+    transform: translateX(0) translateZ(0) rotateY(0deg);
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .slideC .slide:nth-child(2) {
+    transform: translateX(-100px) translateZ(-150px) rotateY(15deg);
+    opacity: 0.8;
+    z-index: 9;
+  }
+
+  .slideC .slide:nth-child(4) {
+    transform: translateX(100px) translateZ(-150px) rotateY(-15deg);
+    opacity: 0.8;
+    z-index: 9;
+  }
+
+  .slideC .slide:nth-child(1),
+  .slideC .slide:nth-child(5) {
+    transform: translateX(0px) translateZ(-200px) rotateY(0deg);
+    opacity: 0.5;
+    z-index: 8;
+  }
+}

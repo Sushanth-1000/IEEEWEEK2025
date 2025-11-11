@@ -1,0 +1,172 @@
+body {
+    background-color: black !important;
+    letter-spacing: 0.05em;
+}
+
+.team-card {
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    min-height: 350px;
+    margin: 0 auto;
+    color: aliceblue !important;
+    background-color: black !important;
+    border: #236e65 !important;
+}
+
+.team-card:hover {
+    transform: translateY(-15px);
+}
+
+header.text-center.my-4 h1 {
+    margin-top: 60px; /* Add space above the header */
+}
+
+header.text-center.my-4 + .team-card {
+    margin-top: 60px; /* Space after the header */
+}
+
+.team-image {
+    border-radius: 50%; 
+    width: 120px; 
+    height: 225px; 
+    object-fit: cover; 
+    margin-bottom: 1rem; 
+}
+
+.team-name {
+    font-weight: 900 !important;
+}
+
+.team-name, .team-role {
+    color: #cff8d6;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    letter-spacing: 0.08em;
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 1000 !important;
+    margin-bottom: 100px;
+    margin-top: 40px !important;
+    background: linear-gradient(0deg, #236e65, #7ecd73, #cff8d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.08em; 
+}
+
+.text-center {
+    text-align: center;
+    color: aliceblue;
+}
+
+.sponsor-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: marquee 15s linear infinite;
+}
+
+.sponsor-image {
+    width: 150px;
+    margin: 0 30px;
+}
+
+.section-header {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#236e65, #7ecd73, #cff8d6);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Tablet media query */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-md-3{
+        margin-right: 10rem;
+    }
+    .team-card {
+        width: 300px; /* Slightly wider for tablets */
+    }
+
+    .team-name, .team-role {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Adjust header size for tablets */
+        margin-bottom: 80px;
+        margin-top: 30px !important;
+    }
+
+    .sponsor-image {
+        width: 120px; /* Reduce sponsor image size for tablets */
+        margin: 0 20px;
+    }
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        margin-right: 7rem;
+    }
+}
+
+/* Small screens media query */
+@media (max-width: 768px) {
+    /* Apply grid structure for team cards */
+    .team-card {
+        /* width: calc(80% - 20px);  */
+        /* Adjust card width */
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .team-name, .team-role {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Phone media query remains unchanged */
+@media (max-width: 480px) {
+    .team-card {
+        margin: auto;
+    }
+}

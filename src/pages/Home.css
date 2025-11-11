@@ -1,0 +1,246 @@
+/* General Styling */
+.net {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.reverse img {
+  margin: 15px;
+}
+
+.flagship-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.flagship-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Countdown Section Styling */
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Events and Flagship Styling Adjustments */
+.events-title, .flagship-title {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 3.5rem;
+  background: linear-gradient(0deg, #236e65, #7ecd73, #cff8d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 1000;
+}
+
+.flagship-event {
+  display: flex;
+  /* flex-direction: row; */
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(36, 40, 44, 0.8);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.flagship-event img {
+  width: 35%;
+  height: auto;
+  border-radius: 5px;
+  margin: 15px;
+  z-index: 10;
+}
+
+/* Sliding Gradient Animation on Hover */
+.flagship-event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(35, 110, 101, 0.3));
+  transition: all 0.5s ease;
+}
+
+.reverse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(35, 110, 101, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  transition: all 0.5s ease;
+}
+
+.flagship-event:hover::before {
+  right: 0;
+}
+
+.reverse:hover::before {
+  left: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 1rem;
+  color: #cff8d6;
+  position: relative;
+  z-index: 1;
+  margin: 0 15px;
+}
+
+.know-more-button {
+  background: linear-gradient(90deg, #236e65, #7ecd73, #cff8d6);
+  color: black;
+  border: none;
+  font-weight: 1000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 5%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.know-more-button:hover {
+  background: linear-gradient(270deg, #236e65, #7ecd73, #cff8d6);
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 20px;
+  z-index: 1;
+}
+
+.description h3 {
+  margin-bottom: 5.2%;
+  text-align: center;
+  font-weight: 1000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .events-title, .flagship-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flagship-event {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .events-title, .flagship-title {
+    font-size: 2rem;
+    margin: 30px auto 30px auto;
+
+  }
+
+  .flagship-event img {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .description h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-title, .flagship-title {
+    font-size: 1.8rem;
+    margin: 30px auto 30px auto;
+  }
+
+  .flagship-event img {
+    width: 90%;
+  }
+
+  .know-more-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 412px) {
+  .events-title, .flagship-title {
+    font-size: 1.8rem;
+    margin: 112px auto 30px auto;
+  }
+  .description{
+    text-align: justify;
+  }
+
+  .flagship-event img {
+    width: 90%;
+  }
+
+  .know-more-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+}
