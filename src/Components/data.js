@@ -1,6 +1,8 @@
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 const fetchEvents = async () => {
   try {
-    const apiUrl = 'http://localhost:5000/api/events';
+    const apiUrl = `${API_URL}/api/events`;
     console.log('🔵 [1/3] Starting fetch to:', apiUrl);
     
     const response = await fetch(apiUrl, {
@@ -30,7 +32,7 @@ const fetchEvents = async () => {
       name: error.name,
       stack: error.stack
     });
-    throw error; // Re-throw to be caught by the component
+    throw error;
   }
 };
 
