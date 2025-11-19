@@ -39,7 +39,7 @@ function Navbaring() {
                 className={`links ${isAnimating && activeLink === index ? 'active' : ''}`} 
                 onClick={(e) => handleLinkClick(e, href, index)}
               >
-                {href==='/home'?'Home':href === '/events' ? 'Events':href === '/sponsor' ? 'sponsor': href === '/meet' ? 'Meet the Team'  : href === '/membership' ? 'Membership' : 'Contact Us'}
+                {href==='/home'?'Home':href === '/schedule' ?'Schedule':href === '/events' ? 'Events':href === '/sponsor' ? 'Sponsor': href === '/meet' ? 'Meet the Team'  : href === '/membership' ? 'Membership' : 'Contact Us'}
               </Nav.Link>
             ))}
           </Nav>
