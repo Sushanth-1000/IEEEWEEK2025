@@ -34,8 +34,8 @@
 }
 
 .countdown-image {
-    width: 150vw; /* Increased to full viewport width */
-    max-width: 90%; /* Increased maximum width */
+    width: 140vw; /* Increased to full viewport width */
+    max-width: 83%; /* Increased maximum width */
     height: auto;
     margin: 0 auto;
     object-fit: contain;
