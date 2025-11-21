@@ -94,7 +94,7 @@ useEffect(() => {
         <h2 className="flagship-title">Flagship Event</h2>
         <div className="flagship-container">
           <div className="flagship-event">
-            <img src="/images/sod.png" alt="Flagship Event Poster" className="poster" />
+            <img src="./images/sod.png" alt="Flagship Event Poster" className="poster" />
             <div className="description">
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
@@ -104,7 +104,7 @@ useEffect(() => {
             </div>
           </div>
           <div className="flagship-event reverse">
-            <img src="/images/tech.png" alt="Flagship Event Poster" className="poster" />
+            <img src="./images/tech.png" alt="Flagship Event Poster" className="poster" />
             <div className="description">
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
