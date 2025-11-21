@@ -11,12 +11,15 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+useEffect(() => {
     let vantaEffect = null;
+    
+    // 1. Check if the device is mobile (width less than 768px)
+    const isMobile = window.innerWidth < 768;
 
     if (window.VANTA) {
       vantaEffect = window.VANTA.NET({
-        el: "#vanta-bg", // TARGET THE ID SPECIFICALLY
+        el: "#vanta-bg",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -26,14 +29,23 @@ function Home() {
         scaleMobile: 1.00,
         color: 0xc7c8e5,
         backgroundColor: 0x10111d,
-        points: 20.00,    
-        maxDistance: 22.00, 
-        spacing: 18.00,   
+        
+        // 2. DYNAMIC CONFIGURATION
+        // If mobile, use fewer points (10), else use standard (20)
+        points: isMobile ? 10.00 : 20.00, 
+        
+        // If mobile, reduce connection distance so lines don't cross the whole screen
+        maxDistance: isMobile ? 18.00 : 22.00, 
+        
+        // If mobile, increase spacing so it looks cleaner
+        spacing: isMobile ? 25.00 : 18.00, 
+        
         showDots: false
       });
     }
 
     const loadEvents = async () => {
+      // ... keep your existing loadEvents logic here
       try {
         setLoading(true);
         const fetchedEvents = await fetchEvents();
@@ -82,21 +94,21 @@ function Home() {
         <h2 className="flagship-title">Flagship Event</h2>
         <div className="flagship-container">
           <div className="flagship-event">
-            <img src="/images/replacer.png" alt="Flagship Event Poster" className="poster" />
+            <img src="/images/sod.jpeg" alt="Flagship Event Poster" className="poster" />
             <div className="description">
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
-              <a href="https://forms.gle//example" target='__blank'>
+              <a href="https://forms.gle/H9vzkiGMmd3N4zbDA" target='__blank'>
                 <button className="know-more-button">Coming soon!</button>
               </a>
             </div>
           </div>
           <div className="flagship-event reverse">
-            <img src="/images/replacer.png" alt="Flagship Event Poster" className="poster" />
+            <img src="/images/tech.jpeg" alt="Flagship Event Poster" className="poster" />
             <div className="description">
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
-              <a href="https://forms.gle//example" target='__blank'>
+              <a href="https://forms.gle/fHYJWXQDbDN5zUAMA" target='__blank'>
                 <button className="know-more-button">Coming soon!</button>
               </a>
             </div>
