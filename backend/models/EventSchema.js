@@ -26,6 +26,11 @@ const EventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  TypeEvent:{
+    type:String,
+    enum: ['Normal', 'Flagship'],
+    required: true,
+  },
   price:{
     type:String,
     required:true,

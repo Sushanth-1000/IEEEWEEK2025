@@ -15,6 +15,18 @@
   background-color: #0a0a0a; 
   min-height: 100vh;
 }
+.flagship-events {
+    background-color: rgba(255, 215, 0, 0.1); /* Light gold background */
+    border: 1px solid #1fb7dd; /* Gold border */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.flagship-events .event-card {
+    /* Add any specific styles for flagship event cards */
+    border: 2px solid #1fb7dd;
+}
 
 /* Titles */
 h1 {

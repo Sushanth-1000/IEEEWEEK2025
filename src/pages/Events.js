@@ -41,8 +41,9 @@ const Events = () => {
     };
 
     // Separate events into technical and non-technical categories
-    const technicalEvents = events.filter(event => event.category === "Technical");
-    const nonTechnicalEvents = events.filter(event => event.category === "Non-Technical");
+    const flagshipEvents =events.filter(event=>event.TypeEvent==="Flagship")
+    const technicalEvents = events.filter(event => event.category === "Technical"&&event.TypeEvent!=="Flagship");
+    const nonTechnicalEvents = events.filter(event => event.category === "Non-Technical"&&event.TypeEvent!=="Flagship");
 
     if (loading) return <div>Loading events...</div>;
     if (error) return <div>Error: {error}</div>;
@@ -52,7 +53,17 @@ const Events = () => {
             <header></header>
             <Navbaring />
 
-            <div className={`events-page`}>
+              <div className={`events-page`}>
+                {flagshipEvents.length > 0 && (
+                    <>
+                        <h1>Flagship Events</h1>
+                        <div className="events-section flagship-events">
+                            {flagshipEvents.map(event => (
+                                <EventCard key={event._id} event={event} />
+                            ))}
+                        </div>
+                    </>
+                )}
                 <h1>Technical Events</h1>
                 <div className="events-section">
                     {technicalEvents.length > 0 ? (

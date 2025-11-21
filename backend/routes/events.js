@@ -16,8 +16,8 @@ router.get('/', async (req, res) => {
 
 
 router.post('/', async (req, res) => {
-  const { title, description, image, date, time, venue, price, priceIEEE, category, registrationOpen, registrationForm } = req.body;
-  const event = new EventSchema({ title, description, image, date, time, venue, price, priceIEEE, category, registrationOpen, registrationForm });
+  const { title, description, image, date, time, venue, TypeEvent, price, priceIEEE, category, registrationOpen, registrationForm } = req.body;
+  const event = new EventSchema({ title, description, image, date, time, venue, TypeEvent, price, priceIEEE, category, registrationOpen, registrationForm });
   try {
     await event.save();
     res.status(201).json(event);
