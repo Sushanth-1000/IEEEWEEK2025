@@ -99,7 +99,7 @@ useEffect(() => {
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
               <a href="https://forms.gle/H9vzkiGMmd3N4zbDA" target='__blank'>
-                <button className="know-more-button">Coming soon!</button>
+                <button className="know-more-button">Register Now!</button>
               </a>
             </div>
           </div>
@@ -109,7 +109,7 @@ useEffect(() => {
               <h3>Coming Soon</h3>
               <p>Stay tuned for more updates!</p>
               <a href="https://forms.gle/fHYJWXQDbDN5zUAMA" target='__blank'>
-                <button className="know-more-button">Coming soon!</button>
+                <button className="know-more-button">Register Now!</button>
               </a>
             </div>
           </div>
