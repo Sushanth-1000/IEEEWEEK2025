@@ -96,8 +96,8 @@ useEffect(() => {
           <div className="flagship-event">
             <img src="./images/sod.png" alt="Flagship Event Poster" className="poster" />
             <div className="description">
-              <h3>Coming Soon</h3>
-              <p>Stay tuned for more updates!</p>
+              <h3>Science of Deduction 5.0</h3>
+              <p>Science of Deduction challenges teams to reopen a closed murder investigation. Analyze forensic inconsistencies, decode digital evidence, and reconstruct the timeline to expose a corporate conspiracy. Use logic and observation to distinguish the scapegoat from the true mastermind.<br/><br/>Date:27th November, 2025<br/>Time:2:00 PM - 5:00 PM</p>
               <a href="https://forms.gle/H9vzkiGMmd3N4zbDA" target='__blank'>
                 <button className="know-more-button">Register Now!</button>
               </a>
@@ -106,8 +106,8 @@ useEffect(() => {
           <div className="flagship-event reverse">
             <img src="./images/tech.png" alt="Flagship Event Poster" className="poster" />
             <div className="description">
-              <h3>Coming Soon</h3>
-              <p>Stay tuned for more updates!</p>
+              <h3>Hack Trail</h3>
+              <p>Step into a hands-on investigation where real cyber incidents are uncovered, traced and decoded. Discover the techniques of cyber investigation through an, guided workflow built for beginners and enthusiasts.<br/><br/> Date: 26th November, 2025<br/> Time: 2:00 PM - 5:00 PM</p>
               <a href="https://forms.gle/fHYJWXQDbDN5zUAMA" target='__blank'>
                 <button className="know-more-button">Register Now!</button>
               </a>

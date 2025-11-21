@@ -41,7 +41,7 @@ const EventCard = ({ event }) => {
                   <span><strong>Time:</strong> {time}</span>
                   <span><strong>Venue:</strong> {venue}</span>
                   <span><strong>IEEE Members:</strong> {priceIEEE}</span>
-                  <span><strong>Non-IEEE Members:</strong> {price}</span>cd 
+                  <span><strong>Non-IEEE Members:</strong> {price}</span>
                 </div>
 
                 {/* Event description */}
