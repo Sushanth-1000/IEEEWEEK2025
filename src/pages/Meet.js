@@ -111,7 +111,7 @@ const Meet = () => {
                             <Card className="team-card">
                                 <Card.Img variant="top" src="/images/namratha.png" alt="Team Member 6" className="team-image" />
                                 <Card.Body>
-                                    <Card.Title className="team-name">Namratha P Manor</Card.Title>
+                                    <Card.Title className="team-name">Namratha P</Card.Title>
                                     <Card.Text className="team-role">Joint Secretary</Card.Text>
                                 </Card.Body>
                             </Card>
